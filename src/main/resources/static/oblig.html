@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="oblig1.js"></script>
+</head>
+<body>
+<h1>Bestilling av kinobiletter</h1>
+
+<table>
+    <tr>
+        <th>Velg film:</th>
+        <td>
+            <select id="film">
+                <option selected disabled>Velg film</option>
+                <option>The Hunger Games</option>
+                <option>Harry Potter</option>
+                <option>Fast and the Furious</option>
+            </select>
+        </td>
+        <td><span id="feilFilm"></span></td>
+    </tr>
+    <tr>
+        <th>Antall</th>
+        <td> <input type="text" id="antall" onchange="testAntall()"/> </td>
+        <td><span id="feilAntall"></span></td>
+    </tr>
+    <tr>
+        <th>Fornavn</th>
+        <td> <input type="text" id="fornavn" onchange="testFornavn()"/> </td>
+        <td><span id="feilFornavn"></span></td>
+    </tr>
+    <tr>
+        <th>Etternavn</th>
+        <td> <input type="text" id="etternavn" onchange="testEtternavn()"/> </td>
+        <td><span id="feilEtternavn"></span></td>
+    </tr>
+    <tr>
+        <th>Telefonnr</th>
+        <td> <input type="text" id="telefonnr" onchange="testTelefonnr()"/> </td>
+        <td><span id="feilTelefonnr"></span></td>
+    </tr>
+    <tr>
+        <th>Epost</th>
+        <td> <input type="text" id="epost" onchange="testEpost()"/> </td>
+        <td><span id="feilEpost"></span></td>
+    </tr>
+    <tr>
+        <td> <button onClick=" registrer();">Kjøp bilett</button> </td>
+    </tr>
+
+</table>
+
+<h2>Alle biletter</h2>
+<div id="bilettRegister"></div>
+<button onclick="slettAlleBilletter()">Slett alle billetter</button>
+
+</body>
+</html>
