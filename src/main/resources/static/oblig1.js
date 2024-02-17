@@ -89,7 +89,9 @@ function testTelefonnr(){
 //Tester fornavn
 function testFornavn(){
     let fornavn = document.getElementById("fornavn").value;
-    if(typeof fornavn ==='string' && fornavn !==''){
+    let fornavnS = Number(fornavn)
+
+    if(isNaN(fornavnS) && fornavn !==''){
         document.getElementById("feilFornavn").innerHTML = "";
         document.getElementById("fornavn").style.borderColor = "";
         return fornavn;}
@@ -104,7 +106,8 @@ function testFornavn(){
 //tester etternavn
 function testEtternavn(){
     let ettrnavn = document.getElementById("etternavn").value;
-    if(typeof ettrnavn ==='string' && ettrnavn !==''){
+    let etternavnS = Number(ettrnavn)
+    if(isNaN(etternavnS) && ettrnavn !==''){
         document.getElementById("feilEtternavn").innerHTML = "";
         document.getElementById("etternavn").style.borderColor = "";
         return ettrnavn;}
